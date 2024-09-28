@@ -4,5 +4,20 @@ type HeaderProps = {
   title?: string
 }
 export default function Header({ title }: HeaderProps) {
-  return <View style={{ backgroundColor: 'blue', height: 40, flex: 1 }}>{<Text>{title}</Text>}</View>
+  return (
+    <View
+      style={{
+        backgroundColor: 'blue',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 40,
+        borderBottomEndRadius: 15,
+        borderBottomLeftRadius: 15,
+      }}
+    >
+      <Text>{title}</Text>
+    </View>
+  )
 }

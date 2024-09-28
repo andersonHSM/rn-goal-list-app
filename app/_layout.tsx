@@ -1,14 +1,16 @@
+import { Stack } from 'expo-router'
+import {
+  initialWindowMetrics,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context'
 import Header from '@/components/Header'
-import { Slot } from 'expo-router'
-import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function RootLayout() {
   return (
-    <>
-      <SafeAreaView>
-        <Header title={'Test header'} />
-        <Slot />
-      </SafeAreaView>
-    </>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+      </Stack>
+    </SafeAreaProvider>
   )
 }
