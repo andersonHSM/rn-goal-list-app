@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
-        <Header title={'Test'} />
+        s<Header title={'Test'} />
         <View
           style={{
             flex: 1,
