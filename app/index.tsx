@@ -1,4 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import View from 'react-native-ui-lib/view';
+import Text from 'react-native-ui-lib/text';
+
 import Header from '@/components/Header';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useThemeColor } from '@/hooks/useThemeColor';
