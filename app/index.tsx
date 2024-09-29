@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Header from '@/components/Header';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useThemeColor } from '@/hooks/useThemeColor';
@@ -11,18 +11,17 @@ export default function Page() {
 		<>
 			<SafeAreaView style={{ flex: 1 }}>
 				<Header title={t('welcome')} />
-				<View
-					style={{
-						flex: 1,
-						justifyContent: 'center',
-						alignItems: 'center',
-						shadowRadius: 1,
-						backgroundColor,
-					}}
-				>
+				<View style={{ ...styles.viewContainer, backgroundColor }}>
 					<Text>Edit app/index.tsx to edit this screen.</Text>
 				</View>
 			</SafeAreaView>
 		</>
 	);
 }
+
+const styles = StyleSheet.create({
+	viewContainer: {
+		flex: 1,
+		padding: 10,
+	},
+});
