@@ -65,7 +65,6 @@ export default function InitialHeader({ title }: HeaderProps) {
 					renderInput={() => {
 						return <Globe style={{ marginRight: 10 }} size={24} color={'black'} />;
 					}}
-					// bottomAccessory={<Globe style={{ marginHorizontal: 'auto' }} size={24} color={'black'} />}
 					style={{ marginRight: 10, flexShrink: 1 }}
 					items={languages}
 					renderItem={(value, { isSelected }, label) => {
